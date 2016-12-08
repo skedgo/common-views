@@ -20,6 +20,16 @@ public abstract class BindableSingleMapFragment extends ButterKnifeFragment {
   private static final String KEY_MAP_STATE = "mapState";
   protected MapView mapView;
 
+  @Override public void onStart() {
+    super.onStart();
+    mapView.onStart();
+  }
+
+  @Override public void onStop() {
+    super.onStop();
+    mapView.onStop();
+  }
+
   @Override public void onResume() {
     super.onResume();
     mapView.onResume();
