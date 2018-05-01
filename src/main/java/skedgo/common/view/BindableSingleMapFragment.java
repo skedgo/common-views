@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.skedgo.android.rx.util.RxFragment;
 
 /**
  * A sort of fragment that allows subclasses to have
@@ -16,7 +17,7 @@ import com.google.android.gms.maps.SupportMapFragment;
  * One benefit compared with {@link SupportMapFragment} is that
  * it'd be easier to perform data binding to the {@link MapView} defined in the xml layout.
  */
-public abstract class BindableSingleMapFragment extends ButterKnifeFragment {
+public abstract class BindableSingleMapFragment extends RxFragment {
   private static final String KEY_MAP_STATE = "mapState";
   protected MapView mapView;
 
