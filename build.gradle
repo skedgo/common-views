@@ -10,7 +10,6 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
-
 android {
   compileSdkVersion 25
   buildToolsVersion "26.0.2"
@@ -43,9 +42,8 @@ dependencies {
   testCompile 'org.mockito:mockito-core:2.8.9'
   testCompile 'org.robolectric:robolectric:3.3.2'
 
-  compileOnly 'com.github.skedgo:rx-utils:v1.0'
-  compileOnly "com.android.support:appcompat-v7:25.3.1"
-  compileOnly "com.android.support:design:25.3.1"
-  compileOnly "com.google.android.gms:play-services-maps:11.0.2"
-  compileOnly 'com.jakewharton:butterknife:8.0.1'
+  implementation 'com.github.skedgo:rx-utils:v1.0'
+  implementation "com.android.support:appcompat-v7:25.3.1"
+  implementation "com.android.support:design:25.3.1"
+  implementation "com.google.android.gms:play-services-maps:11.0.2"
 }
