@@ -10,6 +10,11 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = ext.versions.tripGoGroup
+version = ext.versions.tripGoLibrary
+
 android {
   compileSdkVersion 25
   buildToolsVersion "26.0.2"
@@ -46,4 +51,12 @@ dependencies {
   implementation "com.android.support:appcompat-v7:25.3.1"
   implementation "com.android.support:design:25.3.1"
   implementation "com.google.android.gms:play-services-maps:11.0.2"
+}
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      repository(url: "file://${localMaven}")
+    }
+  }
 }
