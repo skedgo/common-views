@@ -1,5 +1,6 @@
 buildscript {
   repositories {
+    google()
     jcenter()
   }
 
@@ -36,6 +37,7 @@ android {
 }
 
 repositories {
+  google()
   jcenter()
   maven { url "https://jitpack.io" }
 }
