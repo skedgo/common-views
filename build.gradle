@@ -17,7 +17,7 @@ group = ext.versions.tripGoGroup
 version = ext.versions.tripGoLibrary
 
 android {
-  compileSdkVersion 27
+  compileSdkVersion 28
 
   defaultConfig {
     minSdkVersion 15
