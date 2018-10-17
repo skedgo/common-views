@@ -1,9 +1,9 @@
 package skedgo.common.view;
 
 import android.os.Bundle;
-import android.support.annotation.CallSuper;
-import android.support.annotation.IdRes;
-import android.support.annotation.Nullable;
+import androidx.annotation.CallSuper;
+import androidx.annotation.IdRes;
+import androidx.annotation.Nullable;
 import android.view.View;
 
 import com.google.android.gms.maps.MapView;

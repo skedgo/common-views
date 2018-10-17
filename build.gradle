@@ -49,8 +49,7 @@ dependencies {
   testCompile 'org.robolectric:robolectric:3.6.1'
 
   implementation 'com.github.skedgo:rx-utils:v1.0'
-  implementation "com.android.support:appcompat-v7:27.1.1"
-  implementation "com.android.support:design:27.1.1"
+  implementation "com.google.android.material:material:1.0.0"
   implementation "com.google.android.gms:play-services-maps:15.0.1"
 }
 

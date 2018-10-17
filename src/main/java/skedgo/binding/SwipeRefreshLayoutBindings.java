@@ -1,9 +1,9 @@
 package skedgo.binding;
 
-import android.databinding.BindingAdapter;
-import android.databinding.BindingMethod;
-import android.databinding.BindingMethods;
-import android.support.v4.widget.SwipeRefreshLayout;
+import androidx.databinding.BindingAdapter;
+import androidx.databinding.BindingMethod;
+import androidx.databinding.BindingMethods;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 @BindingMethods({
     @BindingMethod(

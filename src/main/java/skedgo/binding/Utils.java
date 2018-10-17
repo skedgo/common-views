@@ -1,8 +1,8 @@
 package skedgo.binding;
 
-import android.databinding.ObservableBoolean;
 import android.widget.ProgressBar;
 
+import androidx.databinding.ObservableBoolean;
 import rx.Observable;
 import rx.functions.Action0;
 import rx.functions.Action1;
