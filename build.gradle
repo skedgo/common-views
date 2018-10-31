@@ -57,6 +57,7 @@ dependencies {
   implementation 'com.github.skedgo:rx-utils:v1.0'
   implementation "com.google.android.material:material:1.0.0"
   implementation "com.google.android.gms:play-services-maps:15.0.1"
+  annotationProcessor "com.android.databinding:library:3.2.1"
 }
 
 uploadArchives {
