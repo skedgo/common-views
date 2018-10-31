@@ -27,3 +27,4 @@ android:
 
 script:
   ./gradlew clean assembleRelease test
+
