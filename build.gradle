@@ -14,10 +14,8 @@ buildscript {
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-if (ext) {
-  group = ext.versions.tripGoGroup
-  version = ext.versions.tripGoLibrary
-}
+//  group = ext.versions.tripGoGroup
+//  version = ext.versions.tripGoLibrary
 
 android {
   compileSdkVersion 28
