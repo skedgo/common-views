@@ -5,7 +5,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.2.1'
+    classpath 'com.android.tools.build:gradle:3.2.0'
     classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
   }
@@ -57,7 +57,6 @@ dependencies {
   implementation 'com.github.skedgo:rx-utils:v1.0'
   implementation "com.google.android.material:material:1.0.0"
   implementation "com.google.android.gms:play-services-maps:15.0.1"
-  annotationProcessor "com.android.databinding:library:3.2.1"
 }
 
 uploadArchives {
