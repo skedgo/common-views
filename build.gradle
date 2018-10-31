@@ -5,19 +5,25 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.1.4'
+    classpath 'com.android.tools.build:gradle:3.2.0'
     classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+  }
+
+
+  ext {
+    localMaven = "${rootDir}/../maven/"
   }
 }
 
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = ext.versions.tripGoGroup
-version = ext.versions.tripGoLibrary
+//  group = ext.versions.tripGoGroup
+//  version = ext.versions.tripGoLibrary
 
 android {
-  compileSdkVersion 27
+  compileSdkVersion 28
 
   defaultConfig {
     minSdkVersion 15
@@ -43,14 +49,13 @@ repositories {
 }
 
 dependencies {
-  testCompile 'junit:junit:4.12'
-  testCompile 'org.assertj:assertj-core:2.6.0'
-  testCompile 'org.mockito:mockito-core:2.8.9'
-  testCompile 'org.robolectric:robolectric:3.6.1'
+  testImplementation 'junit:junit:4.12'
+  testImplementation'org.assertj:assertj-core:2.6.0'
+  testImplementation 'org.mockito:mockito-core:2.8.9'
+  testImplementation 'org.robolectric:robolectric:3.6.1'
 
   implementation 'com.github.skedgo:rx-utils:v1.0'
-  implementation "com.android.support:appcompat-v7:27.1.1"
-  implementation "com.android.support:design:27.1.1"
+  implementation "com.google.android.material:material:1.0.0"
   implementation "com.google.android.gms:play-services-maps:15.0.1"
 }
 
