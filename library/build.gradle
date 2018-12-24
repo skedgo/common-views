@@ -1,0 +1,52 @@
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+  compileSdkVersion 28
+
+  defaultConfig {
+    minSdkVersion 15
+    targetSdkVersion 27
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  dataBinding { enabled = true }
+}
+
+repositories {
+  google()
+  jcenter()
+  maven { url "https://jitpack.io" }
+}
+
+dependencies {
+  testImplementation 'junit:junit:4.12'
+  testImplementation 'org.assertj:assertj-core:2.6.0'
+  testImplementation 'org.mockito:mockito-core:2.8.9'
+  testImplementation 'org.robolectric:robolectric:3.6.1'
+
+  implementation 'com.github.skedgo:rx-utils:v1.0'
+  implementation "com.google.android.material:material:1.0.0"
+  implementation "com.google.android.gms:play-services-maps:15.0.1"
+}
+
+
+group = "com.skedgo.android"
+version = "1.0"
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      repository(url: "file://${localMaven}")
+    }
+  }
+}
