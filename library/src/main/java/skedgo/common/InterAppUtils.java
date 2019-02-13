@@ -17,10 +17,11 @@ public final class InterAppUtils {
   private InterAppUtils() {}
 
   public static void viewAppOnPlayStore(Activity activity, String appId) {
-    activity.startActivity(
-        new Intent(Intent.ACTION_VIEW)
-            .setData(Uri.parse("market://details?id=" + appId))
-    );
+    Intent intent = new Intent(Intent.ACTION_VIEW);
+    intent.setData(Uri.parse(
+        "https://play.google.com/store/apps/details?id=" + appId));
+    intent.setPackage("com.android.vending");
+    activity.startActivity(intent);
   }
 
   /**
