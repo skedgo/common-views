@@ -7,7 +7,7 @@ buildscript {
   dependencies {
     classpath 'com.android.tools.build:gradle:3.2.0'
     classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-    classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    classpath 'digital.wup:android-maven-publish:3.6.2'
   }
 
 }

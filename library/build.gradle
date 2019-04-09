@@ -1,6 +1,6 @@
 
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'digital.wup.android-maven-publish'
 
 android {
   compileSdkVersion 28
@@ -43,10 +43,15 @@ dependencies {
 group = "com.skedgo.android"
 version = "1.0"
 
-uploadArchives {
+publishing {
   repositories {
-    mavenDeployer {
-      repository(url: "file://${localMaven}")
+    maven { url = "file://${localMaven}" }
+  }
+  publications {
+    mavenAar(MavenPublication) {
+      groupId = group
+      version = version
+      from components.android
     }
   }
 }
